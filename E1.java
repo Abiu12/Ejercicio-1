@@ -5,14 +5,11 @@
  */
 import java.util.Scanner;// se importa el Scanner para poder leer el numero desde el teclado
 public  class E1{
-
-       Scanner sc=new Scanner(System.in);//SE crea la variable del Scanner
-        int a=sc.nextInt();//Se lee el numero
-        
-        String serie="";// Se declara el string vacio para despues poder agregarle los numeros de la serie
-        int b=0;// Se declara una variable auxiliar para poder realizar la serie
-       
-        public   String Serie(){
+             
+        public   String Serie(int a){
+           String serie="";// Se declara el string vacio para despues poder agregarle los numeros
+ 
+             int b=0;// Se declara una variable auxiliar para poder realizar la serie
         serie= ""+a;// Se le agrega el numero ingresado a la serie
         
         if(a%2!=0&&a>0){//condicion para el caso que sea un numero impar
@@ -38,5 +35,19 @@ public  class E1{
 
 
 }
+public static void main (String[]args){
+    E1 e=new E1();
+    System.out.println("Introduce un numero para realizar la serie");
+         Scanner sc=new Scanner(System.in);//SE crea la variable del Scanner
+        int a=sc.nextInt();//Se lee el numero
+        System.out.println("La serie de "+a+" es: "+e.Serie(a));
+       
 }
+}
+
+
+        
+   
+
+
 
